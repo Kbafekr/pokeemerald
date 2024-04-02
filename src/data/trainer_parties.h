@@ -8902,12 +8902,17 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BrendanLilycoveMudkip[] 
     {
     .iv = 150,
     .lvl = 42,
+    .species = SPECIES_GIRAFARIG,
+    },
+    {
+    .iv = 150,
+    .lvl = 42,
     .species = SPECIES_PELIPPER,
     },
     {
     .iv = 200,
     .lvl = 44,
-    .species = SPECIES_GROVYLE,
+    .species = SPECIES_SCEPTILE,
     }
 };
 
@@ -8930,12 +8935,17 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BrendanLilycoveTreecko[]
     {
     .iv = 150,
     .lvl = 42,
+    .species = SPECIES_GIRAFARIG,
+    },
+    {
+    .iv = 150,
+    .lvl = 42,
     .species = SPECIES_LUDICOLO,
     },
     {
     .iv = 200,
     .lvl = 44,
-    .species = SPECIES_COMBUSKEN,
+    .species = SPECIES_BLAZIKEN,
     }
 };
 
@@ -8958,12 +8968,17 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BrendanLilycoveTorchic[]
     {
     .iv = 150,
     .lvl = 42,
+    .species = SPECIES_GIRAFARIG,
+    },
+    {
+    .iv = 150,
+    .lvl = 42,
     .species = SPECIES_MACARGO,
     },
     {
     .iv = 200,
     .lvl = 44,
-    .species = SPECIES_MARSHTOMP,
+    .species = SPECIES_SWAMPERT,
     }
 };
 
@@ -8986,12 +9001,17 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayLilycoveMudkip[] = {
     {
     .iv = 150,
     .lvl = 42,
+    .species = SPECIES_GIRAFARIG,
+    },
+    {
+    .iv = 150,
+    .lvl = 42,
     .species = SPECIES_PELIPPER,
     },
     {
     .iv = 200,
     .lvl = 44,
-    .species = SPECIES_GROVYLE,
+    .species = SPECIES_SCEPTILE,
     }
 };
 
@@ -9014,12 +9034,17 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayLilycoveTreecko[] = {
     {
     .iv = 150,
     .lvl = 42,
+    .species = SPECIES_GIRAFARIG,
+    },
+    {
+    .iv = 150,
+    .lvl = 42,
     .species = SPECIES_LUDICOLO,
     },
     {
     .iv = 200,
     .lvl = 44,
-    .species = SPECIES_COMBUSKEN,
+    .species = SPECIES_BLAZIKEN,
     }
 };
 
@@ -9042,12 +9067,17 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayLilycoveTorchic[] = {
     {
     .iv = 150,
     .lvl = 42,
+    .species = SPECIES_GIRAFARIG,
+    },
+    {
+    .iv = 150,
+    .lvl = 42,
     .species = SPECIES_MACARGO,
     },
     {
     .iv = 200,
     .lvl = 44,
-    .species = SPECIES_MARSHTOMP,
+    .species = SPECIES_SWAMPERT,
     }
 };
 
