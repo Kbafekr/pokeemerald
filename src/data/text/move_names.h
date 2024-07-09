@@ -362,4 +362,5 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_AURA_PUNCH] = _("AURA PUNCH"),
     [MOVE_PSYCHO_BOOST] = _("PSYCHO BOOST"),
 
+
 };
