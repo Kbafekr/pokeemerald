@@ -472,6 +472,13 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboStarterId = 0,
         .comboMoves = {COMBO_STARTER_POWDER_SNOW, COMBO_STARTER_HAIL},
     },
+    [MOVE_ICICLE_CRASH] =
+    {
+        .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .comboStarterId = 0,
+        .comboMoves = {COMBO_STARTER_POWDER_SNOW, COMBO_STARTER_HAIL},
+    },
 
     [MOVE_PSYBEAM] =
     {
@@ -674,6 +681,13 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
     },
 
     [MOVE_THUNDERBOLT] =
+    {
+        .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .comboStarterId = 0,
+        .comboMoves = {COMBO_STARTER_CHARGE},
+    },
+    [MOVE_DISCHARGE] =
     {
         .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_COOL,
@@ -1785,6 +1799,14 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_FOCUS_ENERGY, COMBO_STARTER_MIND_READER},
     },
 
+    [MOVE_AURA_PUNCH] =
+    {
+        .effect = CONTEST_EFFECT_STARTLE_MON_WITH_JUDGES_ATTENTION,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .comboStarterId = 0,
+        .comboMoves = {COMBO_STARTER_FOCUS_ENERGY, COMBO_STARTER_MIND_READER},
+    },
+
     [MOVE_MEGAHORN] =
     {
         .effect = CONTEST_EFFECT_BETTER_IF_SAME_TYPE,
@@ -1842,6 +1864,13 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
     },
 
     [MOVE_IRON_TAIL] =
+    {
+        .effect = CONTEST_EFFECT_BADLY_STARTLE_FRONT_MON,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .comboStarterId = 0,
+        .comboMoves = {0},
+    },
+    [MOVE_IRON_HEAD] =
     {
         .effect = CONTEST_EFFECT_BADLY_STARTLE_FRONT_MON,
         .contestCategory = CONTEST_CATEGORY_COOL,
@@ -1954,6 +1983,13 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
     },
 
     [MOVE_EXTREME_SPEED] =
+    {
+        .effect = CONTEST_EFFECT_NEXT_APPEAL_EARLIER,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .comboStarterId = 0,
+        .comboMoves = {0},
+    },
+    [MOVE_FIRST_IMPRESSION] =
     {
         .effect = CONTEST_EFFECT_NEXT_APPEAL_EARLIER,
         .contestCategory = CONTEST_CATEGORY_COOL,
@@ -2650,6 +2686,13 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
     },
 
     [MOVE_AERIAL_ACE] =
+    {
+        .effect = CONTEST_EFFECT_BETTER_IF_FIRST,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .comboStarterId = 0,
+        .comboMoves = {0},
+    },
+    [MOVE_HURRICANE] =
     {
         .effect = CONTEST_EFFECT_BETTER_IF_FIRST,
         .contestCategory = CONTEST_CATEGORY_COOL,

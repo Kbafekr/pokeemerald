@@ -355,9 +355,15 @@
 #define MOVE_SHOCK_WAVE 351
 #define MOVE_WATER_PULSE 352
 #define MOVE_DOOM_DESIRE 353
-#define MOVE_PSYCHO_BOOST 354
+#define MOVE_IRON_HEAD 354
+#define MOVE_FIRST_IMPRESSION 355
+#define MOVE_HURRICANE 356
+#define MOVE_ICICLE_CRASH 357
+#define MOVE_DISCHARGE 358
+#define MOVE_AURA_PUNCH 359
+#define MOVE_PSYCHO_BOOST 360
 
-#define MOVES_COUNT 355
+#define MOVES_COUNT 361
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF

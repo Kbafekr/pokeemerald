@@ -117,6 +117,10 @@ static const u8 sHeadbuttDescription[] = _(
     "A ramming attack that may\n"
     "cause flinching.");
 
+static const u8 sIronHeadDescription[] = _(
+    "A steel-hard slam attack\n"
+    "that may cause flinching.");
+
 static const u8 sHornAttackDescription[] = _(
     "Jabs the foe with sharp\n"
     "horns.");
@@ -893,6 +897,10 @@ static const u8 sDynamicPunchDescription[] = _(
     "Powerful and sure to cause\n"
     "confusion, but inaccurate.");
 
+static const u8 sAuraPunchDescription[] = _(
+    "Powerful and sure to cause\n"
+    "confusion.");
+
 static const u8 sMegahornDescription[] = _(
     "A brutal ramming attack\n"
     "using out-thrust horns.");
@@ -1328,10 +1336,16 @@ static const u8 sBulletSeedDescription[] = _(
 static const u8 sAerialAceDescription[] = _(
     "An extremely speedy and\n"
     "unavoidable attack.");
+static const u8 sHurricaneDescription[] = _(
+    "An unavoidable attack that\n"
+    "may cause confusion.");
 
 static const u8 sIcicleSpearDescription[] = _(
     "Attacks the foe by firing\n"
     "2 to 5 icicles in a row.");
+static const u8 sIcicleCrashDescription[] = _(
+    "Harshly drops an icicle\n"
+    "an may cause flinching.");
 
 static const u8 sIronDefenseDescription[] = _(
     "Hardens the body's surface\n"
@@ -1404,6 +1418,9 @@ static const u8 sRockBlastDescription[] = _(
 static const u8 sShockWaveDescription[] = _(
     "A fast and unavoidable\n"
     "electric attack.");
+static const u8 sDischargeDescription[] = _(
+    "A flare of electricity\n"
+    "that strikes all foes.");
 
 static const u8 sWaterPulseDescription[] = _(
     "Attacks with ultrasonic\n"
@@ -1449,6 +1466,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_ROLLING_KICK - 1] = sRollingKickDescription,
     [MOVE_SAND_ATTACK - 1] = sSandAttackDescription,
     [MOVE_HEADBUTT - 1] = sHeadbuttDescription,
+    [MOVE_IRON_HEAD - 1] = sIronHeadDescription,
     [MOVE_HORN_ATTACK - 1] = sHornAttackDescription,
     [MOVE_FURY_ATTACK - 1] = sFuryAttackDescription,
     [MOVE_HORN_DRILL - 1] = sHornDrillDescription,
@@ -1643,6 +1661,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_SACRED_FIRE - 1] = sSacredFireDescription,
     [MOVE_MAGNITUDE - 1] = sMagnitudeDescription,
     [MOVE_DYNAMIC_PUNCH - 1] = sDynamicPunchDescription,
+    [MOVE_AURA_PUNCH - 1] = sAuraPunchDescription,
     [MOVE_MEGAHORN - 1] = sMegahornDescription,
     [MOVE_DRAGON_BREATH - 1] = sDragonBreathDescription,
     [MOVE_BATON_PASS - 1] = sBatonPassDescription,
@@ -1665,6 +1684,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_MIRROR_COAT - 1] = sMirrorCoatDescription,
     [MOVE_PSYCH_UP - 1] = sPsychUpDescription,
     [MOVE_EXTREME_SPEED - 1] = sExtremeSpeedDescription,
+    [MOVE_FIRST_IMPRESSION - 1] = sExtremeSpeedDescription,
     [MOVE_ANCIENT_POWER - 1] = sAncientPowerDescription,
     [MOVE_SHADOW_BALL - 1] = sShadowBallDescription,
     [MOVE_FUTURE_SIGHT - 1] = sFutureSightDescription,
@@ -1752,7 +1772,9 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_MUDDY_WATER - 1] = sMuddyWaterDescription,
     [MOVE_BULLET_SEED - 1] = sBulletSeedDescription,
     [MOVE_AERIAL_ACE - 1] = sAerialAceDescription,
+    [MOVE_HURRICANE - 1] = sHurricaneDescription,
     [MOVE_ICICLE_SPEAR - 1] = sIcicleSpearDescription,
+    [MOVE_ICICLE_CRASH - 1] = sIcicleCrashDescription,
     [MOVE_IRON_DEFENSE - 1] = sIronDefenseDescription,
     [MOVE_BLOCK - 1] = sBlockDescription,
     [MOVE_HOWL - 1] = sHowlDescription,
@@ -1771,6 +1793,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_DRAGON_DANCE - 1] = sDragonDanceDescription,
     [MOVE_ROCK_BLAST - 1] = sRockBlastDescription,
     [MOVE_SHOCK_WAVE - 1] = sShockWaveDescription,
+    [MOVE_DISCHARGE - 1] = sDischargeDescription,
     [MOVE_WATER_PULSE - 1] = sWaterPulseDescription,
     [MOVE_DOOM_DESIRE - 1] = sDoomDesireDescription,
     [MOVE_PSYCHO_BOOST - 1] = sPsychoBoostDescription,
