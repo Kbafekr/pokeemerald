@@ -3229,7 +3229,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .effect = EFFECT_FUTURE_SIGHT,
         .power = 80,
         .type = TYPE_PSYCHIC,
-        .accuracy = 90,
+        .accuracy = 180,
         .pp = 15,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -4592,7 +4592,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_DOOM_DESIRE] =
     {
         .effect = EFFECT_FUTURE_SIGHT,
-        .power = 140,
+        .power = 180,
         .type = TYPE_STEEL,
         .accuracy = 100,
         .pp = 5,
@@ -4669,12 +4669,12 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
      [MOVE_DISCHARGE] =
     {
-        .effect = EFFECT_HIT,
+        .effect = EFFECT_PARALYZE_HIT,
         .power = 100,
         .type = TYPE_ELECTRIC,
         .accuracy = 100,
         .pp = 15,
-        .secondaryEffectChance = 0,
+        .secondaryEffectChance = 50,
         .target = MOVE_TARGET_BOTH,
         .priority = 0,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
