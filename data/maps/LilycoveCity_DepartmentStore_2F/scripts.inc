@@ -28,13 +28,23 @@ LilycoveCity_DepartmentStore_2F_Pokemart1:
 	.2byte ITEM_POKE_BALL
 	.2byte ITEM_GREAT_BALL
 	.2byte ITEM_ULTRA_BALL
+	.2byte ITEM_MASTER_BALL
+	.2byte ITEM_NET_BALL
+	.2byte ITEM_NEST_BALL
+	.2byte ITEM_SAFARI_BALL
+	.2byte ITEM_DIVE_BALL
+	.2byte ITEM_REPEAT_BALL
+	.2byte ITEM_TIMER_BALL
+	.2byte ITEM_LUXURY_BALL
+	.2byte ITEM_PREMIER_BALL
 	.2byte ITEM_ESCAPE_ROPE
 	.2byte ITEM_FULL_HEAL
-	.2byte ITEM_ANTIDOTE
-	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_BURN_HEAL
-	.2byte ITEM_ICE_HEAL
-	.2byte ITEM_AWAKENING
+	.2byte ITEM_SUN_STONE
+	.2byte ITEM_MOON_STONE
+	.2byte ITEM_FIRE_STONE
+	.2byte ITEM_WATER_STONE
+	.2byte ITEM_LEAF_STONE
+	.2byte ITEM_HEART_SCALE
 	.2byte ITEM_FLUFFY_TAIL
 	.2byte ITEM_NONE
 	release
@@ -57,9 +67,9 @@ LilycoveCity_DepartmentStore_2F_Pokemart2:
 	.2byte ITEM_HYPER_POTION
 	.2byte ITEM_MAX_POTION
 	.2byte ITEM_REVIVE
-	.2byte ITEM_REPEL
-	.2byte ITEM_SUPER_REPEL
+	.2byte ITEM_MAX_REVIVE
 	.2byte ITEM_MAX_REPEL
+	.2byte ITEM_SUPER_REPEL
 	.2byte ITEM_WAVE_MAIL
 	.2byte ITEM_MECH_MAIL
 	.2byte ITEM_NONE
@@ -77,4 +87,3 @@ LilycoveCity_DepartmentStore_2F_Text_GoodGiftForHusband:
 LilycoveCity_DepartmentStore_2F_Text_StockUpOnItems:
 	.string "I'm leaving on a long journey soon.\n"
 	.string "I need to stock up on items.$"
-
