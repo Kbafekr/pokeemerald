@@ -3241,6 +3241,13 @@ static const struct TrainerMonItemCustomMoves sParty_Sidney[] = {
     .heldItem = ITEM_NONE,
     .moves = {MOVE_SURF, MOVE_SWORDS_DANCE, MOVE_STRENGTH, MOVE_FACADE}
     },
+     {
+    .iv = 250,
+    .lvl = 58,
+    .species = SPECIES_SHARPEDO,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_SURF, MOVE_SWORDS_DANCE, MOVE_CRUNCH, MOVE_DOUBLE_EDGE}
+    },
     {
     .iv = 255,
     .lvl = 59,
@@ -3280,6 +3287,13 @@ static const struct TrainerMonItemCustomMoves sParty_Phoebe[] = {
     .moves = {MOVE_SHADOW_BALL, MOVE_PSYCHIC, MOVE_THUNDERBOLT, MOVE_FACADE}
     },
     {
+    .iv = 250,
+    .lvl = 59,
+    .species = SPECIES_SHEDINJA,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_SHADOW_BALL, MOVE_FIRST_IMPRESSION, MOVE_DESTINY_BOND, MOVE_TOXIC}
+    },
+    {
     .iv = 255,
     .lvl = 61,
     .species = SPECIES_DUSCLOPS,
@@ -3306,6 +3320,13 @@ static const struct TrainerMonItemCustomMoves sParty_Glacia[] = {
     {
     .iv = 250,
     .lvl = 62,
+    .species = SPECIES_SEALEO,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_ATTRACT, MOVE_DOUBLE_EDGE, MOVE_HAIL, MOVE_BLIZZARD}
+    },
+    {
+    .iv = 250,
+    .lvl = 61,
     .species = SPECIES_SEALEO,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_ATTRACT, MOVE_DOUBLE_EDGE, MOVE_HAIL, MOVE_BLIZZARD}
@@ -3347,6 +3368,13 @@ static const struct TrainerMonItemCustomMoves sParty_Drake[] = {
     .species = SPECIES_KINGDRA,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_SMOKESCREEN, MOVE_DRAGON_DANCE, MOVE_SURF, MOVE_BODY_SLAM}
+    },
+    {
+    .iv = 255,
+    .lvl = 63,
+    .species = SPECIES_SALAMENCE,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_FLAMETHROWER, MOVE_DRAGON_CLAW, MOVE_ROCK_SLIDE, MOVE_CRUNCH}
     },
     {
     .iv = 250,
@@ -8874,6 +8902,12 @@ static const struct TrainerMonNoItemCustomMoves sParty_WallyVR5[] = {
     .lvl = 53,
     .species = SPECIES_MAGNETON,
     .moves = {MOVE_SUPERSONIC, MOVE_THUNDERBOLT, MOVE_TRI_ATTACK, MOVE_SCREECH}
+    },
+    {
+    .iv = 150,
+    .lvl = 55,
+    .species = SPECIES_HUNTAIL,
+    .moves = {MOVE_CRUNCH, MOVE_SURF, MOVE_ROCK_TOMB, MOVE_SCREECH}
     },
     {
     .iv = 250,
