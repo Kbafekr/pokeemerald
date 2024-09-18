@@ -11,5 +11,4 @@
 
 ## Change Catch rate
 
-## Change Shiny rate
-
+## Change Shiny sprite for legendary pokemon
