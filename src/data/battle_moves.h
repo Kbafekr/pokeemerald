@@ -199,7 +199,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     {
         .effect = EFFECT_HIGH_CRITICAL,
         .power = 80,
-        .type = TYPE_NORMAL,
+        .type = TYPE_GRASS,
         .accuracy = 100,
         .pp = 20,
         .secondaryEffectChance = 0,
@@ -4644,7 +4644,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_HURRICANE] =
     {
         .effect = EFFECT_CONFUSE_HIT,
-        .power = 110,
+        .power = 120,
         .type = TYPE_FLYING,
         .accuracy = 100,
         .pp = 20,

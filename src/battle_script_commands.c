@@ -840,10 +840,10 @@ static const u8 sTerrainToType[] =
 // - ITEM_ULTRA_BALL skips Master Ball and ITEM_NONE
 static const u8 sBallCatchBonuses[] =
 {
-    [ITEM_ULTRA_BALL - ITEM_ULTRA_BALL]  = 20,
-    [ITEM_GREAT_BALL - ITEM_ULTRA_BALL]  = 15,
-    [ITEM_POKE_BALL - ITEM_ULTRA_BALL]   = 10,
-    [ITEM_SAFARI_BALL - ITEM_ULTRA_BALL] = 15
+    [ITEM_ULTRA_BALL - ITEM_ULTRA_BALL]  = 200,
+    [ITEM_GREAT_BALL - ITEM_ULTRA_BALL]  = 150,
+    [ITEM_POKE_BALL - ITEM_ULTRA_BALL]   = 1000,
+    [ITEM_SAFARI_BALL - ITEM_ULTRA_BALL] = 150
 };
 
 // In Battle Palace, moves are chosen based on the pokemons nature rather than by the player
@@ -9867,20 +9867,20 @@ static void Cmd_handleballthrow(void)
             {
             case ITEM_NET_BALL:
                 if (IS_BATTLER_OF_TYPE(gBattlerTarget, TYPE_WATER) || IS_BATTLER_OF_TYPE(gBattlerTarget, TYPE_BUG))
-                    ballMultiplier = 30;
+                    ballMultiplier = 300;
                 else
                     ballMultiplier = 10;
                 break;
             case ITEM_DIVE_BALL:
                 if (GetCurrentMapType() == MAP_TYPE_UNDERWATER)
-                    ballMultiplier = 35;
+                    ballMultiplier = 350;
                 else
                     ballMultiplier = 10;
                 break;
             case ITEM_NEST_BALL:
-                if (gBattleMons[gBattlerTarget].level < 40)
+                if (gBattleMons[gBattlerTarget].level < 100)
                 {
-                    ballMultiplier = 40 - gBattleMons[gBattlerTarget].level;
+                    ballMultiplier = 400 - gBattleMons[gBattlerTarget].level;
                     if (ballMultiplier <= 9)
                         ballMultiplier = 10;
                 }
@@ -9891,18 +9891,18 @@ static void Cmd_handleballthrow(void)
                 break;
             case ITEM_REPEAT_BALL:
                 if (GetSetPokedexFlag(SpeciesToNationalPokedexNum(gBattleMons[gBattlerTarget].species), FLAG_GET_CAUGHT))
-                    ballMultiplier = 30;
+                    ballMultiplier = 300;
                 else
                     ballMultiplier = 10;
                 break;
             case ITEM_TIMER_BALL:
-                ballMultiplier = gBattleResults.battleTurnCounter + 10;
+                ballMultiplier = gBattleResults.battleTurnCounter + 100;
                 if (ballMultiplier > 40)
                     ballMultiplier = 40;
                 break;
             case ITEM_LUXURY_BALL:
             case ITEM_PREMIER_BALL:
-                ballMultiplier = 10;
+                ballMultiplier = 1000;
                 break;
             }
         }
