@@ -2,13 +2,13 @@ Route113_GlassWorkshop_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route113_GlassWorkshop_OnTransition
 	.byte 0
 
-	.set BLUE_FLUTE_PRICE,   250
-	.set YELLOW_FLUTE_PRICE, 500
-	.set RED_FLUTE_PRICE,    500
-	.set WHITE_FLUTE_PRICE,  1000
-	.set BLACK_FLUTE_PRICE,  1000
-	.set PRETTY_CHAIR_PRICE, 6000
-	.set PRETTY_DESK_PRICE,  8000
+	.set BLUE_FLUTE_PRICE,   10
+	.set YELLOW_FLUTE_PRICE, 10
+	.set RED_FLUTE_PRICE,    10
+	.set WHITE_FLUTE_PRICE,  10
+	.set BLACK_FLUTE_PRICE,  10
+	.set PRETTY_CHAIR_PRICE, 10
+	.set PRETTY_DESK_PRICE,  10
 	.set LOWEST_ASH_PRICE,   BLUE_FLUTE_PRICE
 
 Route113_GlassWorkshop_OnTransition:
@@ -377,4 +377,3 @@ Route113_GlassWorkshop_Text_FunToBlowGlassFlute:
 	.string "It's fun to blow a glass flute while\n"
 	.string "my boss is talking.\p"
 	.string "Huff-huff! Puff-puff!$"
-
