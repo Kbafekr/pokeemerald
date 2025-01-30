@@ -2,9 +2,6 @@
 
 ## Generate all data for new pokemon
 
-### Put in Graphics
-
-### Create tm set
 ### Create Learnset
-### Put in Pokedex
+### Put X variants in wild / static
 ### Create static events for mystery gift pokemon and new X Variants
