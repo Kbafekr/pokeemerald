@@ -24,6 +24,11 @@ LavaridgeTown_PokemonCenter_1F_EventScript_Youngster::
 
 LavaridgeTown_PokemonCenter_1F_EventScript_Woman::
 	msgbox LavaridgeTown_PokemonCenter_1F_Text_TrainersPokemonSpendTimeTogether, MSGBOX_NPC
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_TORKOAL1
+	givemon SPECIES_TORKOAL1, 20, ITEM_CHARCOAL
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC
+	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
 LavaridgeTown_PokemonCenter_1F_EventScript_Gentleman::
@@ -31,10 +36,10 @@ LavaridgeTown_PokemonCenter_1F_EventScript_Gentleman::
 	end
 
 LavaridgeTown_PokemonCenter_1F_Text_TrainersPokemonSpendTimeTogether:
-	.string "I think POKéMON get closer to their\n"
-	.string "TRAINERS if they spend time together.\p"
-	.string "The longer the better.\n"
-	.string "That's what I think.$"
+	.string "This TORKOAL has been following me\n"
+	.string "constantly for the past few days.\p"
+	.string "Can you give it the attention\n"
+	.string "it wants?$"
 
 LavaridgeTown_PokemonCenter_1F_Text_HotSpringCanInvigorate:
 	.string "It's sort of magical how just sitting\n"
@@ -47,4 +52,3 @@ LavaridgeTown_PokemonCenter_1F_Text_TrainersShouldRestToo:
 	.string "the hot springs from here.\p"
 	.string "If POKéMON are getting rest, so too\n"
 	.string "should their TRAINERS.$"
-

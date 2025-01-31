@@ -421,6 +421,18 @@ Route119_EventScript_Hideo::
 Route119_EventScript_Chris::
 	trainerbattle_single TRAINER_CHRIS, Route119_Text_ChrisIntro, Route119_Text_ChrisDefeat
 	msgbox Route119_Text_ChrisPostBattle, MSGBOX_AUTOCLOSE
+	msgbox Route119_FishermanChris_GiveFeebasX, MSGBOX_NPC
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_FEEBAS1
+	givemon SPECIES_FEEBAS1, 10, ITEM_MYSTIC_WATER
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC
+	goto Common_EventScript_NoMoreRoomForPokemon
+	end
+
+Route119_FishermanChris_GiveFeebasX:
+	.string "Both were you strong!\p"
+	.string "Why don't you take this\n"
+	.string "FEEBAS with you?\$"
 	end
 
 Route119_EventScript_Fabian::

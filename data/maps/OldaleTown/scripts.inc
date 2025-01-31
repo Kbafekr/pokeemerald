@@ -75,11 +75,8 @@ OldaleTown_EventScript_GoToMartEast::
 
 OldaleTown_EventScript_ExplainPokemonMart::
 	msgbox OldaleTown_Text_ThisIsAPokemonMart, MSGBOX_DEFAULT
-	givemon SPECIES_JIRACHI, 5, ITEM_TWISTED_SPOON
-	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY
-	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC
-	goto Common_EventScript_NoMoreRoomForPokemon
-	end
+	giveitem ITEM_HYPER_POTION
+	goto_if_eq VAR_RESULT, FALSE, OldaleTown_EventScript_BagIsFull
 	msgbox OldaleTown_Text_PotionExplanation, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_POTION_OLDALE
 	fadedefaultbgm

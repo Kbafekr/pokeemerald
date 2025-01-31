@@ -919,9 +919,28 @@ static void CB2_GiveStarter(void)
 
     *GetVarPointer(VAR_STARTER_MON) = gSpecialVar_Result;
     starterMon = GetStarterPokemon(gSpecialVar_Result);
-    ScriptGiveMon(starterMon, 5, ITEM_NONE, 0, 0, 0);
-    // ScriptGiveMon(SPECIES_TORCHIC1, 5, ITEM_NONE, 0, 0, 0);
-    // ScriptGiveMon(SPECIES_MUDKIP1, 5, ITEM_NONE, 0, 0, 0);
+     if (starterMon == SPECIES_TREECKO1)
+    {
+        ScriptGiveMon(SPECIES_TREECKO1, 5, ITEM_NONE, 0, 0, 0);
+        ScriptGiveMon(SPECIES_TORCHIC1, 5, ITEM_NONE, 0, 0, 0);
+        ScriptGiveMon(SPECIES_MUDKIP1, 5, ITEM_NONE, 0, 0, 0);
+    }
+    else if (starterMon  == SPECIES_TORCHIC1)
+    {
+        ScriptGiveMon(SPECIES_TORCHIC1, 5, ITEM_NONE, 0, 0, 0);
+        ScriptGiveMon(SPECIES_MUDKIP1, 5, ITEM_NONE, 0, 0, 0);
+        ScriptGiveMon(SPECIES_TREECKO1, 5, ITEM_NONE, 0, 0, 0);
+    }
+    else if (starterMon == SPECIES_MUDKIP1)
+    {
+        ScriptGiveMon(SPECIES_MUDKIP1, 5, ITEM_NONE, 0, 0, 0);
+        ScriptGiveMon(SPECIES_TREECKO1, 5, ITEM_NONE, 0, 0, 0);
+        ScriptGiveMon(SPECIES_TORCHIC1, 5, ITEM_NONE, 0, 0, 0);
+    }
+    else {
+        ScriptGiveMon(starterMon, 5, ITEM_NONE, 0, 0, 0);
+    }
+
     ResetTasks();
     PlayBattleBGM();
     SetMainCallback2(CB2_StartFirstBattle);

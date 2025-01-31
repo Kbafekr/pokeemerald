@@ -3,6 +3,11 @@ PetalburgCity_House1_MapScripts::
 
 PetalburgCity_House1_EventScript_Man::
 	msgbox PetalburgCity_House1_Text_TravelingIsWonderful, MSGBOX_NPC
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_TAILLOW1
+	givemon SPECIES_TAILLOW1, 5, ITEM_SHARP_BEAK
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC
+	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
 PetalburgCity_House1_EventScript_Woman::
@@ -10,9 +15,9 @@ PetalburgCity_House1_EventScript_Woman::
 	end
 
 PetalburgCity_House1_Text_TravelingIsWonderful:
-	.string "Traveling is wonderful!\p"
-	.string "When I was young, I roamed the seas\n"
-	.string "and the mountains!$"
+	.string "I found this TAILLOW outside.\p"
+	.string "Here, let it tag along with you \n"
+	.string "on your adventure!$"
 
 PetalburgCity_House1_Text_GoOnAdventure:
 	.string "Sigh…\p"
@@ -25,4 +30,3 @@ PetalburgCity_House1_Text_GoOnAdventure:
 	.string "And, sometimes, even get a little\n"
 	.string "homesick…\p"
 	.string "It must be fabulous to travel!$"
-

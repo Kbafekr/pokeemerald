@@ -295,7 +295,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_AideReceivedStarter::
 
 LittlerootTown_ProfessorBirchsLab_EventScript_Cyndaquil::
 	release
-	goto_if_ge VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 6, LittlerootTown_ProfessorBirchsLab_EventScript_AlreadyChoseJohtoStarter
+	goto_if_ge VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 6
 	applymovement LOCALID_BIRCH, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	showmonpic SPECIES_CYNDAQUIL, 10, 3
@@ -306,7 +306,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_Cyndaquil::
 
 LittlerootTown_ProfessorBirchsLab_EventScript_Totodile::
 	release
-	goto_if_ge VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 6, LittlerootTown_ProfessorBirchsLab_EventScript_AlreadyChoseJohtoStarter
+	goto_if_ge VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 6
 	applymovement LOCALID_BIRCH, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	showmonpic SPECIES_TOTODILE, 10, 3
@@ -317,7 +317,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_Totodile::
 
 LittlerootTown_ProfessorBirchsLab_EventScript_Chikorita::
 	release
-	goto_if_ge VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 6, LittlerootTown_ProfessorBirchsLab_EventScript_AlreadyChoseJohtoStarter
+	goto_if_ge VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 6
 	applymovement LOCALID_BIRCH, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	showmonpic SPECIES_CHIKORITA, 10, 3
