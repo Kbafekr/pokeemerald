@@ -8931,7 +8931,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BrendanLilycoveMudkip[] 
     {
     .iv = 150,
     .lvl = 42,
-    .species = SPECIES_MACARGO,
+    .species = SPECIES_MAGCARGO,
     },
     {
     .iv = 150,
@@ -9007,7 +9007,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BrendanLilycoveTorchic[]
     {
     .iv = 150,
     .lvl = 42,
-    .species = SPECIES_MACARGO,
+    .species = SPECIES_MAGCARGO,
     },
     {
     .iv = 200,
@@ -9030,7 +9030,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayLilycoveMudkip[] = {
     {
     .iv = 150,
     .lvl = 42,
-    .species = SPECIES_MACARGO,
+    .species = SPECIES_MAGCARGO,
     },
     {
     .iv = 150,
@@ -9106,7 +9106,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayLilycoveTorchic[] = {
     {
     .iv = 150,
     .lvl = 42,
-    .species = SPECIES_MACARGO,
+    .species = SPECIES_MAGCARGO,
     },
     {
     .iv = 200,

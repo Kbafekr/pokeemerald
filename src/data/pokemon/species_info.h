@@ -9364,12 +9364,12 @@ const struct SpeciesInfo gSpeciesInfo[] =
 
     [SPECIES_TORKOAL1] =
     {
-        .baseHP        = 110,
-        .baseAttack    = 120,
-        .baseDefense   = 300,
-        .baseSpeed     = 40,
-        .baseSpAttack  = 120,
-        .baseSpDefense = 110,
+        .baseHP        = 120,
+        .baseAttack    = 130,
+        .baseDefense   = 250,
+        .baseSpeed     = 50,
+        .baseSpAttack  = 130,
+        .baseSpDefense = 120,
         .types = { TYPE_FIRE, TYPE_STEEL },
         .catchRate = 90,
         .expYield = 161,
@@ -11856,9 +11856,9 @@ const struct SpeciesInfo gSpeciesInfo[] =
     {
         .baseHP        = 170,
         .baseAttack    = 210,
-        .baseDefense   = 280,
+        .baseDefense   = 250,
         .baseSpeed     = 60,
-        .baseSpAttack  = 10,
+        .baseSpAttack  = 40,
         .baseSpDefense = 70,
         .types = { TYPE_STEEL, TYPE_ROCK },
         .catchRate = 45,
