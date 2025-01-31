@@ -288,6 +288,19 @@ const struct CompressedSpritePalette gMonShinyPaletteTable[] =
     SPECIES_SHINY_PAL(SWAMPERT, gMonShinyPalette_Swampert),
     SPECIES_SHINY_PAL(POOCHYENA, gMonShinyPalette_Poochyena),
     SPECIES_SHINY_PAL(MIGHTYENA, gMonShinyPalette_Mightyena),
+
+    SPECIES_SHINY_PAL(TREECKO1, gMonShinyPalette_Treecko1),
+    SPECIES_SHINY_PAL(GROVYLE1, gMonShinyPalette_Grovyle1),
+    SPECIES_SHINY_PAL(SCEPTILE1, gMonShinyPalette_Sceptile1),
+    SPECIES_SHINY_PAL(TORCHIC1, gMonShinyPalette_Torchic1),
+    SPECIES_SHINY_PAL(COMBUSKEN1, gMonShinyPalette_Combusken1),
+    SPECIES_SHINY_PAL(BLAZIKEN1, gMonShinyPalette_Blaziken1),
+    SPECIES_SHINY_PAL(MUDKIP1, gMonShinyPalette_Mudkip1),
+    SPECIES_SHINY_PAL(MARSHTOMP1, gMonShinyPalette_Marshtomp1),
+    SPECIES_SHINY_PAL(SWAMPERT1, gMonShinyPalette_Swampert1),
+    SPECIES_SHINY_PAL(POOCHYENA1, gMonShinyPalette_Poochyena1),
+    SPECIES_SHINY_PAL(MIGHTYENA1, gMonShinyPalette_Mightyena1),
+
     SPECIES_SHINY_PAL(ZIGZAGOON, gMonShinyPalette_Zigzagoon),
     SPECIES_SHINY_PAL(LINOONE, gMonShinyPalette_Linoone),
     SPECIES_SHINY_PAL(WURMPLE, gMonShinyPalette_Wurmple),
@@ -306,6 +319,10 @@ const struct CompressedSpritePalette gMonShinyPaletteTable[] =
     SPECIES_SHINY_PAL(SHEDINJA, gMonShinyPalette_Shedinja),
     SPECIES_SHINY_PAL(TAILLOW, gMonShinyPalette_Taillow),
     SPECIES_SHINY_PAL(SWELLOW, gMonShinyPalette_Swellow),
+
+    SPECIES_SHINY_PAL(TAILLOW1, gMonShinyPalette_Taillow1),
+    SPECIES_SHINY_PAL(SWELLOW1, gMonShinyPalette_Swellow1),
+
     SPECIES_SHINY_PAL(SHROOMISH, gMonShinyPalette_Shroomish),
     SPECIES_SHINY_PAL(BRELOOM, gMonShinyPalette_Breloom),
     SPECIES_SHINY_PAL(SPINDA, gMonShinyPalette_Spinda),
@@ -322,6 +339,9 @@ const struct CompressedSpritePalette gMonShinyPaletteTable[] =
     SPECIES_SHINY_PAL(CLAYDOL, gMonShinyPalette_Claydol),
     SPECIES_SHINY_PAL(NOSEPASS, gMonShinyPalette_Nosepass),
     SPECIES_SHINY_PAL(TORKOAL, gMonShinyPalette_Torkoal),
+
+    SPECIES_SHINY_PAL(TORKOAL1, gMonShinyPalette_Torkoal1),
+
     SPECIES_SHINY_PAL(SABLEYE, gMonShinyPalette_Sableye),
     SPECIES_SHINY_PAL(BARBOACH, gMonShinyPalette_Barboach),
     SPECIES_SHINY_PAL(WHISCASH, gMonShinyPalette_Whiscash),
@@ -335,12 +355,27 @@ const struct CompressedSpritePalette gMonShinyPaletteTable[] =
     SPECIES_SHINY_PAL(TRAPINCH, gMonShinyPalette_Trapinch),
     SPECIES_SHINY_PAL(VIBRAVA, gMonShinyPalette_Vibrava),
     SPECIES_SHINY_PAL(FLYGON, gMonShinyPalette_Flygon),
+
+    SPECIES_SHINY_PAL(FEEBAS1, gMonShinyPalette_Feebas1),
+    SPECIES_SHINY_PAL(MILOTIC1, gMonShinyPalette_Milotic1),
+    SPECIES_SHINY_PAL(CARVANHA1, gMonShinyPalette_Carvanha1),
+    SPECIES_SHINY_PAL(SHARPEDO1, gMonShinyPalette_Sharpedo1),
+    SPECIES_SHINY_PAL(TRAPINCH1, gMonShinyPalette_Trapinch1),
+    SPECIES_SHINY_PAL(VIBRAVA1, gMonShinyPalette_Vibrava1),
+    SPECIES_SHINY_PAL(FLYGON1, gMonShinyPalette_Flygon1),
+
     SPECIES_SHINY_PAL(MAKUHITA, gMonShinyPalette_Makuhita),
     SPECIES_SHINY_PAL(HARIYAMA, gMonShinyPalette_Hariyama),
     SPECIES_SHINY_PAL(ELECTRIKE, gMonShinyPalette_Electrike),
     SPECIES_SHINY_PAL(MANECTRIC, gMonShinyPalette_Manectric),
     SPECIES_SHINY_PAL(NUMEL, gMonShinyPalette_Numel),
     SPECIES_SHINY_PAL(CAMERUPT, gMonShinyPalette_Camerupt),
+
+    SPECIES_SHINY_PAL(ELECTRIKE1, gMonShinyPalette_Electrike1),
+    SPECIES_SHINY_PAL(MANECTRIC1, gMonShinyPalette_Manectric1),
+    SPECIES_SHINY_PAL(NUMEL1, gMonShinyPalette_Numel1),
+    SPECIES_SHINY_PAL(CAMERUPT1, gMonShinyPalette_Camerupt1),
+
     SPECIES_SHINY_PAL(SPHEAL, gMonShinyPalette_Spheal),
     SPECIES_SHINY_PAL(SEALEO, gMonShinyPalette_Sealeo),
     SPECIES_SHINY_PAL(WALREIN, gMonShinyPalette_Walrein),
@@ -367,6 +402,13 @@ const struct CompressedSpritePalette gMonShinyPaletteTable[] =
     SPECIES_SHINY_PAL(SLAKOTH, gMonShinyPalette_Slakoth),
     SPECIES_SHINY_PAL(VIGOROTH, gMonShinyPalette_Vigoroth),
     SPECIES_SHINY_PAL(SLAKING, gMonShinyPalette_Slaking),
+
+    SPECIES_SHINY_PAL(DUSKULL1, gMonShinyPalette_Duskull1),
+    SPECIES_SHINY_PAL(DUSCLOPS1, gMonShinyPalette_Dusclops1),
+    SPECIES_SHINY_PAL(SLAKOTH1, gMonShinyPalette_Slakoth1),
+    SPECIES_SHINY_PAL(VIGOROTH1, gMonShinyPalette_Vigoroth1),
+    SPECIES_SHINY_PAL(SLAKING1, gMonShinyPalette_Slaking1),
+
     SPECIES_SHINY_PAL(GULPIN, gMonShinyPalette_Gulpin),
     SPECIES_SHINY_PAL(SWALOT, gMonShinyPalette_Swalot),
     SPECIES_SHINY_PAL(TROPIUS, gMonShinyPalette_Tropius),
@@ -377,6 +419,9 @@ const struct CompressedSpritePalette gMonShinyPaletteTable[] =
     SPECIES_SHINY_PAL(HUNTAIL, gMonShinyPalette_Huntail),
     SPECIES_SHINY_PAL(GOREBYSS, gMonShinyPalette_Gorebyss),
     SPECIES_SHINY_PAL(ABSOL, gMonShinyPalette_Absol),
+
+    SPECIES_SHINY_PAL(ABSOL1, gMonShinyPalette_Absol1),
+
     SPECIES_SHINY_PAL(SHUPPET, gMonShinyPalette_Shuppet),
     SPECIES_SHINY_PAL(BANETTE, gMonShinyPalette_Banette),
     SPECIES_SHINY_PAL(SEVIPER, gMonShinyPalette_Seviper),
@@ -385,6 +430,11 @@ const struct CompressedSpritePalette gMonShinyPaletteTable[] =
     SPECIES_SHINY_PAL(ARON, gMonShinyPalette_Aron),
     SPECIES_SHINY_PAL(LAIRON, gMonShinyPalette_Lairon),
     SPECIES_SHINY_PAL(AGGRON, gMonShinyPalette_Aggron),
+
+    SPECIES_SHINY_PAL(ARON1, gMonShinyPalette_Aron1),
+    SPECIES_SHINY_PAL(LAIRON1, gMonShinyPalette_Lairon1),
+    SPECIES_SHINY_PAL(AGGRON1, gMonShinyPalette_Aggron1),
+
     SPECIES_SHINY_PAL(CASTFORM, gMonShinyPalette_Castform),
     SPECIES_SHINY_PAL(VOLBEAT, gMonShinyPalette_Volbeat),
     SPECIES_SHINY_PAL(ILLUMISE, gMonShinyPalette_Illumise),
@@ -401,6 +451,21 @@ const struct CompressedSpritePalette gMonShinyPaletteTable[] =
     SPECIES_SHINY_PAL(BELDUM, gMonShinyPalette_Beldum),
     SPECIES_SHINY_PAL(METANG, gMonShinyPalette_Metang),
     SPECIES_SHINY_PAL(METAGROSS, gMonShinyPalette_Metagross),
+
+    SPECIES_SHINY_PAL(LILEEP1, gMonShinyPalette_Lileep1),
+    SPECIES_SHINY_PAL(CRADILY1, gMonShinyPalette_Cradily1),
+    SPECIES_SHINY_PAL(ANORITH1, gMonShinyPalette_Anorith1),
+    SPECIES_SHINY_PAL(ARMALDO1, gMonShinyPalette_Armaldo1),
+    SPECIES_SHINY_PAL(RALTS1, gMonShinyPalette_Ralts1),
+    SPECIES_SHINY_PAL(KIRLIA1, gMonShinyPalette_Kirlia1),
+    SPECIES_SHINY_PAL(GARDEVOIR1, gMonShinyPalette_Gardevoir1),
+    SPECIES_SHINY_PAL(BAGON1, gMonShinyPalette_Bagon1),
+    SPECIES_SHINY_PAL(SHELGON1, gMonShinyPalette_Shelgon1),
+    SPECIES_SHINY_PAL(SALAMENCE1, gMonShinyPalette_Salamence1),
+    SPECIES_SHINY_PAL(BELDUM1, gMonShinyPalette_Beldum1),
+    SPECIES_SHINY_PAL(METANG1, gMonShinyPalette_Metang1),
+    SPECIES_SHINY_PAL(METAGROSS1, gMonShinyPalette_Metagross1),
+
     SPECIES_SHINY_PAL(REGIROCK, gMonShinyPalette_Regirock),
     SPECIES_SHINY_PAL(REGICE, gMonShinyPalette_Regice),
     SPECIES_SHINY_PAL(REGISTEEL, gMonShinyPalette_Registeel),

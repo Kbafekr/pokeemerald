@@ -288,6 +288,19 @@ const struct CompressedSpriteSheet gMonFrontPicTable[] =
     SPECIES_SPRITE(SWAMPERT, gMonFrontPic_Swampert),
     SPECIES_SPRITE(POOCHYENA, gMonFrontPic_Poochyena),
     SPECIES_SPRITE(MIGHTYENA, gMonFrontPic_Mightyena),
+
+    SPECIES_SPRITE(TREECKO1, gMonFrontPic_Treecko),
+    SPECIES_SPRITE(GROVYLE1, gMonFrontPic_Grovyle),
+    SPECIES_SPRITE(SCEPTILE1, gMonFrontPic_Sceptile),
+    SPECIES_SPRITE(TORCHIC1, gMonFrontPic_Torchic),
+    SPECIES_SPRITE(COMBUSKEN1, gMonFrontPic_Combusken),
+    SPECIES_SPRITE(BLAZIKEN1, gMonFrontPic_Blaziken),
+    SPECIES_SPRITE(MUDKIP1, gMonFrontPic_Mudkip),
+    SPECIES_SPRITE(MARSHTOMP1, gMonFrontPic_Marshtomp),
+    SPECIES_SPRITE(SWAMPERT1, gMonFrontPic_Swampert),
+    SPECIES_SPRITE(POOCHYENA1, gMonFrontPic_Poochyena),
+    SPECIES_SPRITE(MIGHTYENA1, gMonFrontPic_Mightyena),
+
     SPECIES_SPRITE(ZIGZAGOON, gMonFrontPic_Zigzagoon),
     SPECIES_SPRITE(LINOONE, gMonFrontPic_Linoone),
     SPECIES_SPRITE(WURMPLE, gMonFrontPic_Wurmple),
@@ -306,6 +319,10 @@ const struct CompressedSpriteSheet gMonFrontPicTable[] =
     SPECIES_SPRITE(SHEDINJA, gMonFrontPic_Shedinja),
     SPECIES_SPRITE(TAILLOW, gMonFrontPic_Taillow),
     SPECIES_SPRITE(SWELLOW, gMonFrontPic_Swellow),
+
+    SPECIES_SPRITE(TAILLOW1, gMonFrontPic_Taillow),
+    SPECIES_SPRITE(SWELLOW1, gMonFrontPic_Swellow),
+
     SPECIES_SPRITE(SHROOMISH, gMonFrontPic_Shroomish),
     SPECIES_SPRITE(BRELOOM, gMonFrontPic_Breloom),
     SPECIES_SPRITE(SPINDA, gMonFrontPic_Spinda),
@@ -322,6 +339,9 @@ const struct CompressedSpriteSheet gMonFrontPicTable[] =
     SPECIES_SPRITE(CLAYDOL, gMonFrontPic_Claydol),
     SPECIES_SPRITE(NOSEPASS, gMonFrontPic_Nosepass),
     SPECIES_SPRITE(TORKOAL, gMonFrontPic_Torkoal),
+
+    SPECIES_SPRITE(TORKOAL1, gMonFrontPic_Torkoal),
+
     SPECIES_SPRITE(SABLEYE, gMonFrontPic_Sableye),
     SPECIES_SPRITE(BARBOACH, gMonFrontPic_Barboach),
     SPECIES_SPRITE(WHISCASH, gMonFrontPic_Whiscash),
@@ -335,12 +355,27 @@ const struct CompressedSpriteSheet gMonFrontPicTable[] =
     SPECIES_SPRITE(TRAPINCH, gMonFrontPic_Trapinch),
     SPECIES_SPRITE(VIBRAVA, gMonFrontPic_Vibrava),
     SPECIES_SPRITE(FLYGON, gMonFrontPic_Flygon),
+
+    SPECIES_SPRITE(FEEBAS1, gMonFrontPic_Feebas),
+    SPECIES_SPRITE(MILOTIC1, gMonFrontPic_Milotic),
+    SPECIES_SPRITE(CARVANHA1, gMonFrontPic_Carvanha),
+    SPECIES_SPRITE(SHARPEDO1, gMonFrontPic_Sharpedo),
+    SPECIES_SPRITE(TRAPINCH1, gMonFrontPic_Trapinch),
+    SPECIES_SPRITE(VIBRAVA1, gMonFrontPic_Vibrava),
+    SPECIES_SPRITE(FLYGON1, gMonFrontPic_Flygon),
+
     SPECIES_SPRITE(MAKUHITA, gMonFrontPic_Makuhita),
     SPECIES_SPRITE(HARIYAMA, gMonFrontPic_Hariyama),
     SPECIES_SPRITE(ELECTRIKE, gMonFrontPic_Electrike),
     SPECIES_SPRITE(MANECTRIC, gMonFrontPic_Manectric),
     SPECIES_SPRITE(NUMEL, gMonFrontPic_Numel),
     SPECIES_SPRITE(CAMERUPT, gMonFrontPic_Camerupt),
+
+    SPECIES_SPRITE(ELECTRIKE1, gMonFrontPic_Electrike),
+    SPECIES_SPRITE(MANECTRIC1, gMonFrontPic_Manectric),
+    SPECIES_SPRITE(NUMEL1, gMonFrontPic_Numel),
+    SPECIES_SPRITE(CAMERUPT1, gMonFrontPic_Camerupt),
+
     SPECIES_SPRITE(SPHEAL, gMonFrontPic_Spheal),
     SPECIES_SPRITE(SEALEO, gMonFrontPic_Sealeo),
     SPECIES_SPRITE(WALREIN, gMonFrontPic_Walrein),
@@ -367,6 +402,14 @@ const struct CompressedSpriteSheet gMonFrontPicTable[] =
     SPECIES_SPRITE(SLAKOTH, gMonFrontPic_Slakoth),
     SPECIES_SPRITE(VIGOROTH, gMonFrontPic_Vigoroth),
     SPECIES_SPRITE(SLAKING, gMonFrontPic_Slaking),
+
+    SPECIES_SPRITE(DUSKULL1, gMonFrontPic_Duskull),
+    SPECIES_SPRITE(DUSCLOPS1, gMonFrontPic_Dusclops),
+    SPECIES_SPRITE(SLAKOTH1, gMonFrontPic_Slakoth),
+    SPECIES_SPRITE(VIGOROTH1, gMonFrontPic_Vigoroth),
+    SPECIES_SPRITE(SLAKING1, gMonFrontPic_Slaking),
+
+
     SPECIES_SPRITE(GULPIN, gMonFrontPic_Gulpin),
     SPECIES_SPRITE(SWALOT, gMonFrontPic_Swalot),
     SPECIES_SPRITE(TROPIUS, gMonFrontPic_Tropius),
@@ -377,6 +420,9 @@ const struct CompressedSpriteSheet gMonFrontPicTable[] =
     SPECIES_SPRITE(HUNTAIL, gMonFrontPic_Huntail),
     SPECIES_SPRITE(GOREBYSS, gMonFrontPic_Gorebyss),
     SPECIES_SPRITE(ABSOL, gMonFrontPic_Absol),
+
+    SPECIES_SPRITE(ABSOL1, gMonFrontPic_Absol),
+
     SPECIES_SPRITE(SHUPPET, gMonFrontPic_Shuppet),
     SPECIES_SPRITE(BANETTE, gMonFrontPic_Banette),
     SPECIES_SPRITE(SEVIPER, gMonFrontPic_Seviper),
@@ -385,6 +431,11 @@ const struct CompressedSpriteSheet gMonFrontPicTable[] =
     SPECIES_SPRITE(ARON, gMonFrontPic_Aron),
     SPECIES_SPRITE(LAIRON, gMonFrontPic_Lairon),
     SPECIES_SPRITE(AGGRON, gMonFrontPic_Aggron),
+
+     SPECIES_SPRITE(ARON1, gMonFrontPic_Aron),
+    SPECIES_SPRITE(LAIRON1, gMonFrontPic_Lairon),
+    SPECIES_SPRITE(AGGRON1, gMonFrontPic_Aggron),
+
     SPECIES_SPRITE(CASTFORM, gMonFrontPic_Castform),
     SPECIES_SPRITE(VOLBEAT, gMonFrontPic_Volbeat),
     SPECIES_SPRITE(ILLUMISE, gMonFrontPic_Illumise),
@@ -401,6 +452,21 @@ const struct CompressedSpriteSheet gMonFrontPicTable[] =
     SPECIES_SPRITE(BELDUM, gMonFrontPic_Beldum),
     SPECIES_SPRITE(METANG, gMonFrontPic_Metang),
     SPECIES_SPRITE(METAGROSS, gMonFrontPic_Metagross),
+
+    SPECIES_SPRITE(LILEEP1, gMonFrontPic_Lileep),
+    SPECIES_SPRITE(CRADILY1, gMonFrontPic_Cradily),
+    SPECIES_SPRITE(ANORITH1, gMonFrontPic_Anorith),
+    SPECIES_SPRITE(ARMALDO1, gMonFrontPic_Armaldo),
+    SPECIES_SPRITE(RALTS1, gMonFrontPic_Ralts),
+    SPECIES_SPRITE(KIRLIA1, gMonFrontPic_Kirlia),
+    SPECIES_SPRITE(GARDEVOIR1, gMonFrontPic_Gardevoir),
+    SPECIES_SPRITE(BAGON1, gMonFrontPic_Bagon),
+    SPECIES_SPRITE(SHELGON1, gMonFrontPic_Shelgon),
+    SPECIES_SPRITE(SALAMENCE1, gMonFrontPic_Salamence),
+    SPECIES_SPRITE(BELDUM1, gMonFrontPic_Beldum),
+    SPECIES_SPRITE(METANG1, gMonFrontPic_Metang),
+    SPECIES_SPRITE(METAGROSS1, gMonFrontPic_Metagross),
+
     SPECIES_SPRITE(REGIROCK, gMonFrontPic_Regirock),
     SPECIES_SPRITE(REGICE, gMonFrontPic_Regice),
     SPECIES_SPRITE(REGISTEEL, gMonFrontPic_Registeel),

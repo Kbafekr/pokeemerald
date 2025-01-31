@@ -288,6 +288,19 @@ const struct CompressedSpritePalette gMonPaletteTable[] =
     SPECIES_PAL(SWAMPERT, gMonPalette_Swampert),
     SPECIES_PAL(POOCHYENA, gMonPalette_Poochyena),
     SPECIES_PAL(MIGHTYENA, gMonPalette_Mightyena),
+
+    SPECIES_PAL(TREECKO1, gMonPalette_Treecko1),
+    SPECIES_PAL(GROVYLE1, gMonPalette_Grovyle1),
+    SPECIES_PAL(SCEPTILE1, gMonPalette_Sceptile1),
+    SPECIES_PAL(TORCHIC1, gMonPalette_Torchic1),
+    SPECIES_PAL(COMBUSKEN1, gMonPalette_Combusken1),
+    SPECIES_PAL(BLAZIKEN1, gMonPalette_Blaziken1),
+    SPECIES_PAL(MUDKIP1, gMonPalette_Mudkip1),
+    SPECIES_PAL(MARSHTOMP1, gMonPalette_Marshtomp1),
+    SPECIES_PAL(SWAMPERT1, gMonPalette_Swampert1),
+    SPECIES_PAL(POOCHYENA1, gMonPalette_Poochyena1),
+    SPECIES_PAL(MIGHTYENA1, gMonPalette_Mightyena1),
+
     SPECIES_PAL(ZIGZAGOON, gMonPalette_Zigzagoon),
     SPECIES_PAL(LINOONE, gMonPalette_Linoone),
     SPECIES_PAL(WURMPLE, gMonPalette_Wurmple),
@@ -306,6 +319,10 @@ const struct CompressedSpritePalette gMonPaletteTable[] =
     SPECIES_PAL(SHEDINJA, gMonPalette_Shedinja),
     SPECIES_PAL(TAILLOW, gMonPalette_Taillow),
     SPECIES_PAL(SWELLOW, gMonPalette_Swellow),
+
+    SPECIES_PAL(TAILLOW1, gMonPalette_Taillow1),
+    SPECIES_PAL(SWELLOW1, gMonPalette_Swellow1),
+
     SPECIES_PAL(SHROOMISH, gMonPalette_Shroomish),
     SPECIES_PAL(BRELOOM, gMonPalette_Breloom),
     SPECIES_PAL(SPINDA, gMonPalette_Spinda),
@@ -322,6 +339,9 @@ const struct CompressedSpritePalette gMonPaletteTable[] =
     SPECIES_PAL(CLAYDOL, gMonPalette_Claydol),
     SPECIES_PAL(NOSEPASS, gMonPalette_Nosepass),
     SPECIES_PAL(TORKOAL, gMonPalette_Torkoal),
+
+    SPECIES_PAL(TORKOAL1, gMonPalette_Torkoal1),
+
     SPECIES_PAL(SABLEYE, gMonPalette_Sableye),
     SPECIES_PAL(BARBOACH, gMonPalette_Barboach),
     SPECIES_PAL(WHISCASH, gMonPalette_Whiscash),
@@ -335,12 +355,27 @@ const struct CompressedSpritePalette gMonPaletteTable[] =
     SPECIES_PAL(TRAPINCH, gMonPalette_Trapinch),
     SPECIES_PAL(VIBRAVA, gMonPalette_Vibrava),
     SPECIES_PAL(FLYGON, gMonPalette_Flygon),
+
+    SPECIES_PAL(FEEBAS1, gMonPalette_Feebas1),
+    SPECIES_PAL(MILOTIC1, gMonPalette_Milotic1),
+    SPECIES_PAL(CARVANHA1, gMonPalette_Carvanha1),
+    SPECIES_PAL(SHARPEDO1, gMonPalette_Sharpedo1),
+    SPECIES_PAL(TRAPINCH1, gMonPalette_Trapinch1),
+    SPECIES_PAL(VIBRAVA1, gMonPalette_Vibrava1),
+    SPECIES_PAL(FLYGON1, gMonPalette_Flygon1),
+
     SPECIES_PAL(MAKUHITA, gMonPalette_Makuhita),
     SPECIES_PAL(HARIYAMA, gMonPalette_Hariyama),
     SPECIES_PAL(ELECTRIKE, gMonPalette_Electrike),
     SPECIES_PAL(MANECTRIC, gMonPalette_Manectric),
     SPECIES_PAL(NUMEL, gMonPalette_Numel),
     SPECIES_PAL(CAMERUPT, gMonPalette_Camerupt),
+
+    SPECIES_PAL(ELECTRIKE1, gMonPalette_Electrike1),
+    SPECIES_PAL(MANECTRIC1, gMonPalette_Manectric1),
+    SPECIES_PAL(NUMEL1, gMonPalette_Numel1),
+    SPECIES_PAL(CAMERUPT1, gMonPalette_Camerupt1),
+
     SPECIES_PAL(SPHEAL, gMonPalette_Spheal),
     SPECIES_PAL(SEALEO, gMonPalette_Sealeo),
     SPECIES_PAL(WALREIN, gMonPalette_Walrein),
@@ -367,6 +402,13 @@ const struct CompressedSpritePalette gMonPaletteTable[] =
     SPECIES_PAL(SLAKOTH, gMonPalette_Slakoth),
     SPECIES_PAL(VIGOROTH, gMonPalette_Vigoroth),
     SPECIES_PAL(SLAKING, gMonPalette_Slaking),
+
+    SPECIES_PAL(DUSKULL1, gMonPalette_Duskull1),
+    SPECIES_PAL(DUSCLOPS1, gMonPalette_Dusclops1),
+    SPECIES_PAL(SLAKOTH1, gMonPalette_Slakoth1),
+    SPECIES_PAL(VIGOROTH1, gMonPalette_Vigoroth1),
+    SPECIES_PAL(SLAKING1, gMonPalette_Slaking1),
+
     SPECIES_PAL(GULPIN, gMonPalette_Gulpin),
     SPECIES_PAL(SWALOT, gMonPalette_Swalot),
     SPECIES_PAL(TROPIUS, gMonPalette_Tropius),
@@ -377,6 +419,10 @@ const struct CompressedSpritePalette gMonPaletteTable[] =
     SPECIES_PAL(HUNTAIL, gMonPalette_Huntail),
     SPECIES_PAL(GOREBYSS, gMonPalette_Gorebyss),
     SPECIES_PAL(ABSOL, gMonPalette_Absol),
+
+    SPECIES_PAL(ABSOL1, gMonPalette_Absol1),
+
+
     SPECIES_PAL(SHUPPET, gMonPalette_Shuppet),
     SPECIES_PAL(BANETTE, gMonPalette_Banette),
     SPECIES_PAL(SEVIPER, gMonPalette_Seviper),
@@ -385,6 +431,11 @@ const struct CompressedSpritePalette gMonPaletteTable[] =
     SPECIES_PAL(ARON, gMonPalette_Aron),
     SPECIES_PAL(LAIRON, gMonPalette_Lairon),
     SPECIES_PAL(AGGRON, gMonPalette_Aggron),
+
+    SPECIES_PAL(ARON1, gMonPalette_Aron1),
+    SPECIES_PAL(LAIRON1, gMonPalette_Lairon1),
+    SPECIES_PAL(AGGRON1, gMonPalette_Aggron1),
+
     SPECIES_PAL(CASTFORM, gMonPalette_Castform),
     SPECIES_PAL(VOLBEAT, gMonPalette_Volbeat),
     SPECIES_PAL(ILLUMISE, gMonPalette_Illumise),
@@ -401,6 +452,21 @@ const struct CompressedSpritePalette gMonPaletteTable[] =
     SPECIES_PAL(BELDUM, gMonPalette_Beldum),
     SPECIES_PAL(METANG, gMonPalette_Metang),
     SPECIES_PAL(METAGROSS, gMonPalette_Metagross),
+
+    SPECIES_PAL(LILEEP1, gMonPalette_Lileep1),
+    SPECIES_PAL(CRADILY1, gMonPalette_Cradily1),
+    SPECIES_PAL(ANORITH1, gMonPalette_Anorith1),
+    SPECIES_PAL(ARMALDO1, gMonPalette_Armaldo1),
+    SPECIES_PAL(RALTS1, gMonPalette_Ralts1),
+    SPECIES_PAL(KIRLIA1, gMonPalette_Kirlia1),
+    SPECIES_PAL(GARDEVOIR1, gMonPalette_Gardevoir1),
+    SPECIES_PAL(BAGON1, gMonPalette_Bagon1),
+    SPECIES_PAL(SHELGON1, gMonPalette_Shelgon1),
+    SPECIES_PAL(SALAMENCE1, gMonPalette_Salamence1),
+    SPECIES_PAL(BELDUM1, gMonPalette_Beldum1),
+    SPECIES_PAL(METANG1, gMonPalette_Metang1),
+    SPECIES_PAL(METAGROSS1, gMonPalette_Metagross1),
+
     SPECIES_PAL(REGIROCK, gMonPalette_Regirock),
     SPECIES_PAL(REGICE, gMonPalette_Regice),
     SPECIES_PAL(REGISTEEL, gMonPalette_Registeel),

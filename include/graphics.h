@@ -1795,6 +1795,7 @@ extern const u32 gMonFrontPic_QuestionMark[];
 extern const u32 gMonPalette_QuestionMark[];
 extern const u32 gMonBackPic_QuestionMark[];
 extern const u32 gMonShinyPalette_QuestionMark[];
+
 extern const u32 gMonFrontPic_Treecko[];
 extern const u32 gMonPalette_Treecko[];
 extern const u32 gMonBackPic_Treecko[];
@@ -1802,6 +1803,7 @@ extern const u32 gMonShinyPalette_Treecko[];
 extern const u32 gMonStillFrontPic_Treecko[];
 extern const u8 gMonIcon_Treecko[];
 extern const u8 gMonFootprint_Treecko[];
+
 extern const u32 gMonFrontPic_Grovyle[];
 extern const u32 gMonPalette_Grovyle[];
 extern const u32 gMonBackPic_Grovyle[];
