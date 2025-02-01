@@ -525,31 +525,6 @@ Route119_EventScript_DefeatedChris::
 	msgbox Route119_FishermanChris_GiveFeebasX, MSGBOX_NPC
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_FEEBAS1
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_JIRACHI
- givemon SPECIES_JIRACHI, 5, ITEM_TWISTED_SPOON
- goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY
- goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC
- goto Common_EventScript_NoMoreRoomForPokemon
- end
-
 */
 
 
