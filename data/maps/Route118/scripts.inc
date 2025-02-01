@@ -198,10 +198,82 @@ Route118_EventScript_RematchRose::
 	msgbox Route118_Text_RosePostRematch, MSGBOX_AUTOCLOSE
 	end
 
+
+
 Route118_EventScript_Barny::
 	trainerbattle_single TRAINER_BARNY, Route118_Text_BarnyIntro, Route118_Text_BarnyDefeat
-	msgbox Route118_Text_BarnyPostBattle, MSGBOX_AUTOCLOSE
+	goto Route118_EventScript_DefeatedBarny
 	end
+
+Route118_EventScript_DefeatedBarny::
+	msgbox Route118_Barny_Text_GiveCarvanhaX, MSGBOX_NPC
+ 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_CARVANHA1
+ 	givemon SPECIES_CARVANHA1, 5, ITEM_KINGS_ROCK
+ 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, Route118_EventScript_ReceiveCarvanhaParty
+ 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, Route118_EventScript_ReceiveCarvanhaPC
+ 	goto Common_EventScript_NoMoreRoomForPokemon
+ 	end
+
+Route118_Barny_Text_GiveCarvanhaX:
+ 	.string "What a fantastic battle!\p"
+ 	.string "I caught this strange looking\n"
+ 	.string "CARVANHA earlier and I think\n"
+ 	.string "you're strong enough to keep it.$"
+
+
+Route118_EventScript_ReceiveCarvanhaParty::
+	call Route118_EventScript_ReceiveCarvanhaFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route118_EventScript_FinishReceivingCarvanha
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto Route118_EventScript_FinishReceivingCarvanha
+	end
+
+Route118_EventScript_ReceiveCarvanhaPC::
+	call Route118_EventScript_ReceiveCarvanhaFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route118_EventScript_TransferCarvanhaToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto Route118_EventScript_TransferCarvanhaToPC
+	end
+
+
+Route118_EventScript_ReceiveCarvanhaFanfare::
+	bufferspeciesname STR_VAR_2, SPECIES_CARVANHA1
+	playfanfare MUS_OBTAIN_ITEM
+	message Route118_EventScript_Text_ReceivedCarvanha
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_CARVANHA1
+	return
+
+Route118_EventScript_Text_ReceivedCarvanha:
+	.string "{PLAYER} received {STR_VAR_2}!$"
+
+
+Route118_EventScript_FinishReceivingCarvanha::
+	release
+	end
+
+
+Route118_EventScript_TransferCarvanhaToPC::
+	call Common_EventScript_TransferredToPC
+	goto Route118_EventScript_FinishReceivingCarvanha
+	end
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Route118_EventScript_Wade::
 	trainerbattle_single TRAINER_WADE, Route118_Text_WadeIntro, Route118_Text_WadeDefeat
@@ -298,4 +370,3 @@ Route118_Text_RouteSignMauville:
 Route118_Text_RouteSign119:
 	.string "ROUTE 118\n"
 	.string "{UP_ARROW} ROUTE 119$"
-

@@ -26,13 +26,9 @@ LavaridgeTown_PokemonCenter_1F_EventScript_Woman::
 	msgbox LavaridgeTown_PokemonCenter_1F_Text_TrainersPokemonSpendTimeTogether, MSGBOX_NPC
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_TORKOAL1
 	givemon SPECIES_TORKOAL1, 20, ITEM_CHARCOAL
-	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY
-	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LavaridgeTown_PokemonCenter_1F_EventScript_ReceiveTorkoalParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LavaridgeTown_PokemonCenter_1F_EventScript_ReceiveTorkoalPC
 	goto Common_EventScript_NoMoreRoomForPokemon
-	end
-
-LavaridgeTown_PokemonCenter_1F_EventScript_Gentleman::
-	msgbox LavaridgeTown_PokemonCenter_1F_Text_TrainersShouldRestToo, MSGBOX_NPC
 	end
 
 LavaridgeTown_PokemonCenter_1F_Text_TrainersPokemonSpendTimeTogether:
@@ -40,6 +36,56 @@ LavaridgeTown_PokemonCenter_1F_Text_TrainersPokemonSpendTimeTogether:
 	.string "constantly for the past few days.\p"
 	.string "Can you give it the attention\n"
 	.string "it wants?$"
+
+LavaridgeTown_PokemonCenter_1F_EventScript_ReceiveTorkoalParty::
+	call LavaridgeTown_PokemonCenter_1F_EventScript_ReceiveTorkoalFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LavaridgeTown_PokemonCenter_1F_EventScript_FinishReceivingTorkoal
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto LavaridgeTown_PokemonCenter_1F_EventScript_FinishReceivingTorkoal
+	end
+
+LavaridgeTown_PokemonCenter_1F_EventScript_ReceiveTorkoalPC::
+	call LavaridgeTown_PokemonCenter_1F_EventScript_ReceiveTorkoalFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LavaridgeTown_PokemonCenter_1F_EventScript_TransferTorkoalToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto LavaridgeTown_PokemonCenter_1F_EventScript_TransferTorkoalToPC
+	end
+
+
+LavaridgeTown_PokemonCenter_1F_EventScript_ReceiveTorkoalFanfare::
+	bufferspeciesname STR_VAR_2, SPECIES_TORKOAL1
+	playfanfare MUS_OBTAIN_ITEM
+	message LavaridgeTown_PokemonCenter_1F_EventScript_Text_ReceivedTorkoal
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_TORKOAL1
+	return
+
+LavaridgeTown_PokemonCenter_1F_EventScript_Text_ReceivedTorkoal:
+	.string "{PLAYER} received {STR_VAR_2}!$"
+
+
+LavaridgeTown_PokemonCenter_1F_EventScript_FinishReceivingTorkoal::
+	release
+	end
+
+
+LavaridgeTown_PokemonCenter_1F_EventScript_TransferTorkoalToPC::
+	call Common_EventScript_TransferredToPC
+	goto LavaridgeTown_PokemonCenter_1F_EventScript_FinishReceivingTorkoal
+	end
+
+
+
+
+
+LavaridgeTown_PokemonCenter_1F_EventScript_Gentleman::
+	msgbox LavaridgeTown_PokemonCenter_1F_Text_TrainersShouldRestToo, MSGBOX_NPC
+	end
+
 
 LavaridgeTown_PokemonCenter_1F_Text_HotSpringCanInvigorate:
 	.string "It's sort of magical how just sitting\n"

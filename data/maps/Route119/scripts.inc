@@ -418,22 +418,78 @@ Route119_EventScript_Hideo::
 	msgbox Route119_Text_HideoPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+
+
+
 Route119_EventScript_Chris::
 	trainerbattle_single TRAINER_CHRIS, Route119_Text_ChrisIntro, Route119_Text_ChrisDefeat
-	msgbox Route119_Text_ChrisPostBattle, MSGBOX_AUTOCLOSE
+	goto Route119_EventScript_DefeatedChris
+	end
+
+Route119_EventScript_DefeatedChris::
 	msgbox Route119_FishermanChris_GiveFeebasX, MSGBOX_NPC
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_FEEBAS1
 	givemon SPECIES_FEEBAS1, 10, ITEM_MYSTIC_WATER
-	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY
-	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, Route119_EventScript_ReceiveFeebasParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, Route119_EventScript_ReceiveFeebasPC
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
 Route119_FishermanChris_GiveFeebasX:
-	.string "Both were you strong!\p"
+	.string "Boy were you strong!\p"
 	.string "Why don't you take this\n"
-	.string "FEEBAS with you?\$"
+	.string "FEEBAS with you?$"
 	end
+
+
+Route119_EventScript_ReceiveFeebasParty::
+	call Route119_EventScript_ReceiveFeebasFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route119_EventScript_FinishReceivingFeebas
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto Route119_EventScript_FinishReceivingFeebas
+	end
+
+Route119_EventScript_ReceiveFeebasPC::
+	call Route119_EventScript_ReceiveFeebasFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route119_EventScript_ReceiveTransferFeebasToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto Route119_EventScript_ReceiveTransferFeebasToPC
+	end
+
+
+Route119_EventScript_ReceiveFeebasFanfare::
+	bufferspeciesname STR_VAR_2, SPECIES_FEEBAS1
+	playfanfare MUS_OBTAIN_ITEM
+	message Route119_EventScript_Text_ReceivedFeebas
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_FEEBAS1
+	return
+
+Route119_EventScript_Text_ReceivedFeebas:
+	.string "{PLAYER} received {STR_VAR_2}!$"
+
+
+Route119_EventScript_FinishReceivingFeebas::
+	release
+	end
+
+
+Route119_EventScript_ReceiveTransferFeebasToPC::
+	call Common_EventScript_TransferredToPC
+	goto Route119_EventScript_FinishReceivingFeebas
+	end
+
+
+
+
+
+
+
+
 
 Route119_EventScript_Fabian::
 	trainerbattle_single TRAINER_FABIAN, Route119_Text_FabianIntro, Route119_Text_FabianDefeat
