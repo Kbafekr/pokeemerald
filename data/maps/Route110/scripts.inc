@@ -279,10 +279,96 @@ Route110_EventScript_IsabelRematch::
 	msgbox Route110_Text_IsabelRematchPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+
+
+
+
+
+
+
 Route110_EventScript_Timmy::
 	trainerbattle_single TRAINER_TIMMY, Route110_Text_TimmyIntro, Route110_Text_TimmyDefeated
-	msgbox Route110_Text_TimmyPostBattle, MSGBOX_AUTOCLOSE
+	goto Route110_EventScript_DefeatedTimmy
 	end
+
+Route110_EventScript_DefeatedTimmy::
+	msgbox Route110_Timmy_GiveElectrikeX, MSGBOX_NPC
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_ELECTRIKE1
+	givemon SPECIES_ELECTRIKE1, 5, ITEM_MAGNET
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, Route110_EventScript_ReceiveElectrikeParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, Route110_EventScript_ReceiveElectrikePC
+	goto Common_EventScript_NoMoreRoomForPokemon
+	end
+
+Route110_Timmy_GiveElectrikeX:
+	.string "You sure are a strong trainer.\p"
+	.string "Do you think you can take this\n"
+	.string "ELECTRIKE with you on your journey?$"
+
+Route110_EventScript_ReceiveElectrikeParty::
+	call Route110_EventScript_ReceiveElectrikeFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route110_EventScript_FinishReceivingElectrike
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto Route110_EventScript_FinishReceivingElectrike
+	end
+
+Route110_EventScript_ReceiveElectrikePC::
+	call Route110_EventScript_ReceiveElectrikeFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route110_EventScript_TransferElectrikeToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto Route110_EventScript_TransferElectrikeToPC
+	end
+
+
+Route110_EventScript_ReceiveElectrikeFanfare::
+	bufferspeciesname STR_VAR_2, SPECIES_ELECTRIKE1
+	playfanfare MUS_OBTAIN_ITEM
+	message Route110_EventScript_Text_ReceivedElectrike
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_ELECTRIKE1
+	return
+
+Route110_EventScript_Text_ReceivedElectrike:
+	.string "{PLAYER} received {STR_VAR_2}!$"
+
+
+Route110_EventScript_FinishReceivingElectrike::
+	release
+	end
+
+
+Route110_EventScript_TransferElectrikeToPC::
+	call Common_EventScript_TransferredToPC
+	goto Route110_EventScript_FinishReceivingElectrike
+	end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Route110_EventScript_Unused::
 	end
@@ -991,4 +1077,3 @@ Route110_Text_KeepAnEyeOutForRival:
 	.string "… … … … … …\p"
 	.string "Well, I had better get going.\n"
 	.string "See you again, {PLAYER}{KUN}!$"
-

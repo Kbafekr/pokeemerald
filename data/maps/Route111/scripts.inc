@@ -438,8 +438,71 @@ Route111_EventScript_RockSmashTipFatMan::
 
 Route111_EventScript_Drew::
 	trainerbattle_single TRAINER_DREW, Route111_Text_DrewIntro, Route111_Text_DrewDefeat
-	msgbox Route111_Text_DrewPostBattle, MSGBOX_AUTOCLOSE
+	goto Route111_EventScript_DefeatedDrew
 	end
+
+Route111_EventScript_DefeatedDrew::
+	msgbox Route111_Text_GiveTrapinchX, MSGBOX_NPC
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_TRAPINCH1
+	givemon SPECIES_TRAPINCH1, 15, ITEM_SOFT_SAND
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, Route111_EventScript_ReceiveTrapinchParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, Route111_EventScript_ReceiveTrapinchPC
+	goto Common_EventScript_NoMoreRoomForPokemon
+	end
+
+Route111_Text_GiveTrapinchX:
+	.string "You sure were tough!\p"
+	.string "Why don't you take this\n"
+	.string "TRAPINCH I found earlier.$"
+
+Route111_EventScript_ReceiveTrapinchParty::
+	call Route111_EventScript_ReceiveTrapinchFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route111_EventScript_FinishReceivingTrapinch
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto Route111_EventScript_FinishReceivingTrapinch
+	end
+
+Route111_EventScript_ReceiveTrapinchPC::
+	call Route111_EventScript_ReceiveTrapinchFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route111_EventScript_TransferTrapinchToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto Route111_EventScript_TransferTrapinchToPC
+	end
+
+
+Route111_EventScript_ReceiveTrapinchFanfare::
+	bufferspeciesname STR_VAR_2, SPECIES_TRAPINCH1
+	playfanfare MUS_OBTAIN_ITEM
+	message Route111_EventScript_Text_ReceivedTrapinch
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_TRAPINCH1
+	return
+
+Route111_EventScript_Text_ReceivedTrapinch:
+	.string "{PLAYER} received {STR_VAR_2}!$"
+
+
+Route111_EventScript_FinishReceivingTrapinch::
+	release
+	end
+
+
+Route111_EventScript_TransferTrapinchToPC::
+	call Common_EventScript_TransferredToPC
+	goto Route111_EventScript_FinishReceivingTrapinch
+	end
+
+
+
+
+
+
+
+
 
 Route111_EventScript_Heidi::
 	trainerbattle_single TRAINER_HEIDI, Route111_Text_HeidiIntro, Route111_Text_HeidiDefeat
@@ -726,4 +789,3 @@ Route111_Text_TrainerHillSign:
 	.string "{RIGHT_ARROW} TRAINER HILL ENTRANCE\p"
 	.string "“Scale the heights, you hot-blooded\n"
 	.string "TRAINERS!”$"
-

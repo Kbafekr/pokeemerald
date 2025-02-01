@@ -61,7 +61,59 @@ Route112_EventScript_RouteSignLavaridge::
 
 Route112_EventScript_Hiker::
 	msgbox Route112_Text_NotEasyToGetBackToLavaridge, MSGBOX_NPC
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_NUMEL1
+	givemon SPECIES_NUMEL1, 5, ITEM_FOCUS_BAND
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, Route112_EventScript_ReceiveNumelParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, Route112_EventScript_ReceiveNumelPC
+	goto Common_EventScript_NoMoreRoomForPokemon
 	end
+
+
+Route112_EventScript_ReceiveNumelParty::
+	call Route112_EventScript_ReceiveNumelFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route112_EventScript_FinishReceivingNumel
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto Route112_EventScript_FinishReceivingNumel
+	end
+
+Route112_EventScript_ReceiveNumelPC::
+	call Route112_EventScript_ReceiveNumelFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route112_EventScript_TransferNumelToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto Route112_EventScript_TransferNumelToPC
+	end
+
+
+Route112_EventScript_ReceiveNumelFanfare::
+	bufferspeciesname STR_VAR_2, SPECIES_NUMEL1
+	playfanfare MUS_OBTAIN_ITEM
+	message Route112_EventScript_Text_ReceivedNumel
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_NUMEL1
+	return
+
+Route112_EventScript_Text_ReceivedNumel:
+	.string "{PLAYER} received {STR_VAR_2}!$"
+
+
+Route112_EventScript_FinishReceivingNumel::
+	release
+	end
+
+
+Route112_EventScript_TransferNumelToPC::
+	call Common_EventScript_TransferredToPC
+	goto Route112_EventScript_FinishReceivingNumel
+	end
+
+
+
+
+
 
 Route112_EventScript_Brice::
 	trainerbattle_single TRAINER_BRICE, Route112_Text_BriceIntro, Route112_Text_BriceDefeat
@@ -128,7 +180,8 @@ Route112_Text_CantLetAnyonePassUntilTheyreBack:
 Route112_Text_NotEasyToGetBackToLavaridge:
 	.string "Eh, I'd like to get to MAUVILLE, but if\n"
 	.string "I went down these ledges, it'd be no\l"
-	.string "easy matter to get back to LAVARIDGE.$"
+	.string "easy matter to get back to LAVARIDGE.\p"
+	.string "By the way do you want a NUMEL?$"
 
 Route112_Text_MtChimneyCableCarSign:
 	.string "MT. CHIMNEY CABLE CAR\n"
@@ -142,4 +195,3 @@ Route112_Text_MtChimneySign:
 Route112_Text_RouteSignLavaridge:
 	.string "ROUTE 112\n"
 	.string "{LEFT_ARROW} LAVARIDGE TOWN$"
-

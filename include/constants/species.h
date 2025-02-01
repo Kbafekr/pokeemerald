@@ -445,6 +445,15 @@
 #define SPECIES_CARVANHA1 428
 #define SPECIES_SHARPEDO1 429
 
+#define SPECIES_TRAPINCH1 430
+#define SPECIES_VIBRAVA1 431
+#define SPECIES_FLYGON1 432
+
+#define SPECIES_ELECTRIKE1 433
+#define SPECIES_MANECTRIC1 434
+
+#define SPECIES_NUMEL1 435
+#define SPECIES_CAMERUPT1 436
 /*
 
 OldaleTown_House1_EventScript_Woman::
@@ -541,24 +550,9 @@ Route119_EventScript_DefeatedChris::
  goto Common_EventScript_NoMoreRoomForPokemon
  end
 
-
-
-
-
-
-
-
 */
 
-#define SPECIES_TRAPINCH1 430
-#define SPECIES_VIBRAVA1 431
-#define SPECIES_FLYGON1 432
 
-#define SPECIES_ELECTRIKE1 433
-#define SPECIES_MANECTRIC1 434
-
-#define SPECIES_NUMEL1 435
-#define SPECIES_CAMERUPT1 436
 
 #define SPECIES_DUSKULL1 437
 #define SPECIES_DUSCLOPS1 438
