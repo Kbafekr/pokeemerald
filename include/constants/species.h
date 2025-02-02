@@ -454,6 +454,10 @@
 
 #define SPECIES_NUMEL1 435
 #define SPECIES_CAMERUPT1 436
+
+#define SPECIES_DUSKULL1 437
+#define SPECIES_DUSCLOPS1 438
+
 /*
 
 OldaleTown_House1_EventScript_Woman::
@@ -526,11 +530,6 @@ Route119_EventScript_DefeatedChris::
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_FEEBAS1
 
 */
-
-
-
-#define SPECIES_DUSKULL1 437
-#define SPECIES_DUSCLOPS1 438
 
 #define SPECIES_SLAKOTH1 439
 #define SPECIES_VIGOROTH1 440
