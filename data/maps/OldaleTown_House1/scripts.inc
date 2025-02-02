@@ -4,7 +4,7 @@ OldaleTown_House1_MapScripts::
 OldaleTown_House1_EventScript_Woman::
 	msgbox OldaleTown_House1_Text_GivePoochyenaX, MSGBOX_NPC
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_POOCHYENA1
-	givemon SPECIES_POOCHYENA1, 5, ITEM_BLACK_GLASSES
+	givemon SPECIES_POOCHYENA1, 5, ITEM_POISON_BARB
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, OldaleTown_House1_EventScript_ReceivePoochyenaParty
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, OldaleTown_House1_EventScript_ReceivePoochyenaPC
 	goto Common_EventScript_NoMoreRoomForPokemon

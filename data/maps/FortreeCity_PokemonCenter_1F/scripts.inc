@@ -17,9 +17,74 @@ FortreeCity_PokemonCenter_1F_EventScript_Nurse::
 	release
 	end
 
+
+
+
+
 FortreeCity_PokemonCenter_1F_EventScript_Gentleman::
 	msgbox FortreeCity_PokemonCenter_1F_Text_GoToSafariZone, MSGBOX_NPC
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_ABSOL1
+	givemon SPECIES_ABSOL1, 20, ITEM_BLACK_GLASSES
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, FortreeCity_PokemonCenter_1F_EventScript_ReceiveAbsolParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, FortreeCity_PokemonCenter_1F_EventScript_ReceiveAbsolPC
+	goto Common_EventScript_NoMoreRoomForPokemon
 	end
+
+	end
+
+FortreeCity_PokemonCenter_1F_Text_GoToSafariZone:
+	.string "Listen, kid, are you working\n"
+	.string "on a POKéDEX?\p"
+	.string "Hmm… Go to the SAFARI ZONE.\n"
+	.string "That's my suggestion.\p"
+	.string "Here's an ABSOL I found that\n"
+	.string "might help you on your journey.$"
+
+FortreeCity_PokemonCenter_1F_EventScript_ReceiveAbsolParty::
+	call FortreeCity_PokemonCenter_1F_EventScript_ReceiveAbsolFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FortreeCity_PokemonCenter_1F_EventScript_FinishReceivingAbsol
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto FortreeCity_PokemonCenter_1F_EventScript_FinishReceivingAbsol
+	end
+
+FortreeCity_PokemonCenter_1F_EventScript_ReceiveAbsolPC::
+	call FortreeCity_PokemonCenter_1F_EventScript_ReceiveAbsolFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FortreeCity_PokemonCenter_1F_EventScript_TransferAbsolToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto FortreeCity_PokemonCenter_1F_EventScript_TransferAbsolToPC
+	end
+
+
+FortreeCity_PokemonCenter_1F_EventScript_ReceiveAbsolFanfare::
+	bufferspeciesname STR_VAR_2, SPECIES_ABSOL1
+	playfanfare MUS_OBTAIN_ITEM
+	message FortreeCity_PokemonCenter_1F_EventScript_Text_ReceiveAbsol
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_ABSOL1
+	return
+
+FortreeCity_PokemonCenter_1F_EventScript_Text_ReceiveAbsol:
+	.string "{PLAYER} received {STR_VAR_2}!$"
+
+
+FortreeCity_PokemonCenter_1F_EventScript_FinishReceivingAbsol::
+	release
+	end
+
+
+FortreeCity_PokemonCenter_1F_EventScript_TransferAbsolToPC::
+	call Common_EventScript_TransferredToPC
+	goto FortreeCity_PokemonCenter_1F_EventScript_FinishReceivingAbsol
+	end
+
+
+
+
+
 
 FortreeCity_PokemonCenter_1F_EventScript_Man::
 	msgbox FortreeCity_PokemonCenter_1F_Text_RecordCornerIsNeat, MSGBOX_NPC
@@ -28,12 +93,6 @@ FortreeCity_PokemonCenter_1F_EventScript_Man::
 FortreeCity_PokemonCenter_1F_EventScript_Boy::
 	msgbox FortreeCity_PokemonCenter_1F_Text_DoYouKnowAboutPokenav, MSGBOX_NPC
 	end
-
-FortreeCity_PokemonCenter_1F_Text_GoToSafariZone:
-	.string "Listen, kid, are you working\n"
-	.string "on a POKéDEX?\p"
-	.string "Hmm… Go to the SAFARI ZONE.\n"
-	.string "That's my suggestion.$"
 
 FortreeCity_PokemonCenter_1F_Text_RecordCornerIsNeat:
 	.string "Have you done anything at\n"
@@ -54,4 +113,3 @@ FortreeCity_PokemonCenter_1F_Text_DoYouKnowAboutPokenav:
 	.string "want a rematch with you.\p"
 	.string "It's really nifty! Those DEVON guys\n"
 	.string "sure know what they're doing!$"
-

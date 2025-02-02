@@ -240,9 +240,85 @@ PetalburgWoods_Movement_AquaApproachPlayer:
 	walk_down
 	step_end
 
+
+
+
+
+
 PetalburgWoods_EventScript_Boy1::
 	msgbox PetalburgWoods_Text_StayOutOfTallGrass, MSGBOX_NPC
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_SLAKING1
+	givemon SPECIES_SLAKING1, 5, ITEM_SILK_SCARF
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PetalburgWoods_EventScript_ReceiveSlakothParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PetalburgWoods_EventScript_ReceiveSlakothPC
+	goto Common_EventScript_NoMoreRoomForPokemon
 	end
+	end
+
+
+PetalburgWoods_Text_StayOutOfTallGrass:
+	.string "Yo, there!\n"
+	.string "Your POKéMON doing okay?\p"
+	.string "If your POKéMON are weak and you want\n"
+	.string "to avoid battles, you should stay out\l"
+	.string "of tall grass.\p"
+	.string "Then again, \n"
+	.string "I found this cool looking SLAKOTH\n"
+	.string "just lying around in the grass.\p"
+	.string "You can have it.$"
+
+
+
+PetalburgWoods_EventScript_ReceiveSlakothParty::
+	call PetalburgWoods_EventScript_ReceiveSlakothFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, PetalburgWoods_EventScript_FinishReceivingSlakoth
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto PetalburgWoods_EventScript_FinishReceivingSlakoth
+	end
+
+PetalburgWoods_EventScript_ReceiveSlakothPC::
+	call PetalburgWoods_EventScript_ReceiveSlakothFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, PetalburgWoods_EventScript_TransferSlakothToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto PetalburgWoods_EventScript_TransferSlakothToPC
+	end
+
+
+PetalburgWoods_EventScript_ReceiveSlakothFanfare::
+	bufferspeciesname STR_VAR_2, SPECIES_SLAKOTH1
+	playfanfare MUS_OBTAIN_ITEM
+	message PetalburgWoods_EventScript_Text_ReceivedSlakoth
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_SLAKOTH1
+	return
+
+PetalburgWoods_EventScript_Text_ReceivedSlakoth:
+	.string "{PLAYER} received {STR_VAR_2}!$"
+
+
+PetalburgWoods_EventScript_FinishReceivingSlakoth::
+	release
+	end
+
+
+PetalburgWoods_EventScript_TransferSlakothToPC::
+	call Common_EventScript_TransferredToPC
+	goto PetalburgWoods_EventScript_FinishReceivingSlakoth
+	end
+
+
+
+
+
+
+
+
+
+
 
 PetalburgWoods_EventScript_Boy2::
 	msgbox PetalburgWoods_Text_HiddenItemsExplanation, MSGBOX_NPC
@@ -429,13 +505,6 @@ PetalburgWoods_Text_IveBeenTrainingHard:
 	.string "strong POKéMON, right?\l"
 	.string "So, I've been training hard.$"
 
-PetalburgWoods_Text_StayOutOfTallGrass:
-	.string "Yo, there!\n"
-	.string "Your POKéMON doing okay?\p"
-	.string "If your POKéMON are weak and you want\n"
-	.string "to avoid battles, you should stay out\l"
-	.string "of tall grass.$"
-
 PetalburgWoods_Text_HiddenItemsExplanation:
 	.string "Sometimes, there are things on the\n"
 	.string "ground even if you can't see them.\p"
@@ -473,4 +542,3 @@ PetalburgWoods_Text_TrainerTipsPP:
 	.string "make moves during battle.\p"
 	.string "If a POKéMON runs out of PP, it must be\n"
 	.string "taken to a POKéMON CENTER.$"
-

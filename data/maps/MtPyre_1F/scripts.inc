@@ -23,7 +23,7 @@ MtPyre_1F_EventScript_ReceivedCleanseTag::
 MtPyre_1F_EventScript_PokefanF::
 	msgbox MtPyre_1F_Text_GiveDuskullX, MSGBOX_NPC
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_DUSKULL1
-	givemon SPECIES_DUSKULL1, 5, ITEM_CLEANSE_TAG
+	givemon SPECIES_DUSKULL1, 20, ITEM_CLEANSE_TAG
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, MtPyre_1F_EventScript_ReceiveDuskullParty
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, MtPyre_1F_EventScript_ReceiveDuskullPC
 	goto Common_EventScript_NoMoreRoomForPokemon
