@@ -12,14 +12,6 @@ RustboroCity_DevonCorp_2F_EventScript_SetFossilReady::
 	setvar VAR_FOSSIL_RESURRECTION_STATE, 2
 	return
 
-RustboroCity_DevonCorp_2F_EventScript_TalkToPokemonScientist::
-	lock
-	faceplayer
-	call_if_eq VAR_FOSSIL_RESURRECTION_STATE, 1, RustboroCity_DevonCorp_2F_EventScript_SetFossilReady
-	msgbox RustboroCity_DevonCorp_2F_Text_DeviceForTalkingToPokemon, MSGBOX_DEFAULT
-	release
-	end
-
 RustboroCity_DevonCorp_2F_EventScript_BallScientist::
 	lock
 	faceplayer
@@ -45,14 +37,6 @@ RustboroCity_DevonCorp_2F_EventScript_PokenavScientist::
 
 RustboroCity_DevonCorp_2F_EventScript_HasPokenav::
 	msgbox RustboroCity_DevonCorp_2F_Text_WowThatsAPokenav, MSGBOX_DEFAULT
-	release
-	end
-
-RustboroCity_DevonCorp_2F_EventScript_PokemonDreamsScientist::
-	lock
-	faceplayer
-	call_if_eq VAR_FOSSIL_RESURRECTION_STATE, 1, RustboroCity_DevonCorp_2F_EventScript_SetFossilReady
-	msgbox RustboroCity_DevonCorp_2F_Text_DeviceToVisualizePokemonDreams, MSGBOX_DEFAULT
 	release
 	end
 
@@ -270,10 +254,144 @@ RustboroCity_DevonCorp_2F_EventScript_WorkOnNext::
 	release
 	end
 
+RustboroCity_DevonCorp_2F_EventScript_TalkToPokemonScientist::
+	lock
+	faceplayer
+	call_if_eq VAR_FOSSIL_RESURRECTION_STATE, 1, RustboroCity_DevonCorp_2F_EventScript_SetFossilReady
+	msgbox RustboroCity_DevonCorp_2F_Text_DeviceForTalkingToPokemon, MSGBOX_DEFAULT
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_LILEEP1
+	givemon SPECIES_LILEEP1, 5, ITEM_MIRACLE_SEED
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, RustboroCity_DevonCorp_2F_EventScript_ReceiveLileepXParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, RustboroCity_DevonCorp_2F_EventScript_ReceiveLileepXPC
+	goto Common_EventScript_NoMoreRoomForPokemon
+	end
+
+
 RustboroCity_DevonCorp_2F_Text_DeviceForTalkingToPokemon:
 	.string "We're developing a device for talking\n"
 	.string "with POKéMON.\p"
-	.string "But we haven't had much success…$"
+	.string "But we haven't had much success…\p"
+	.string "Hey! Want a LILEEP?$"
+
+RustboroCity_DevonCorp_2F_EventScript_ReceiveLileepXParty::
+	call RustboroCity_DevonCorp_2F_EventScript_ReceiveLileepXFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, RustboroCity_DevonCorp_2F_EventScript_FinishReceivingLileepX
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto RustboroCity_DevonCorp_2F_EventScript_FinishReceivingLileepX
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_ReceiveLileepXPC::
+	call RustboroCity_DevonCorp_2F_EventScript_ReceiveLileepXFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, RustboroCity_DevonCorp_2F_EventScript_TransferLileepXToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto RustboroCity_DevonCorp_2F_EventScript_TransferLileepXToPC
+	end
+
+
+RustboroCity_DevonCorp_2F_EventScript_ReceiveLileepXFanfare::
+	bufferspeciesname STR_VAR_2, SPECIES_LILEEP1
+	playfanfare MUS_OBTAIN_ITEM
+	message RustboroCity_DevonCorp_2F_EventScript_Text_ReceivedLileepX
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_LILEEP1
+	return
+
+RustboroCity_DevonCorp_2F_EventScript_Text_ReceivedLileepX:
+	.string "{PLAYER} received {STR_VAR_2}!$"
+
+
+RustboroCity_DevonCorp_2F_EventScript_FinishReceivingLileepX::
+	release
+	end
+
+
+RustboroCity_DevonCorp_2F_EventScript_TransferLileepXToPC::
+	call Common_EventScript_TransferredToPC
+	goto RustboroCity_DevonCorp_2F_EventScript_FinishReceivingLileepX
+	end
+
+
+
+
+
+
+
+RustboroCity_DevonCorp_2F_EventScript_PokemonDreamsScientist::
+	lock
+	faceplayer
+	call_if_eq VAR_FOSSIL_RESURRECTION_STATE, 1, RustboroCity_DevonCorp_2F_EventScript_SetFossilReady
+	msgbox RustboroCity_DevonCorp_2F_Text_DeviceToVisualizePokemonDreams, MSGBOX_DEFAULT
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_ANORITH1
+	givemon SPECIES_ANORITH1, 5, ITEM_HARD_STONE
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, RustboroCity_DevonCorp_2F_EventScript_ReceiveAnorithXParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, RustboroCity_DevonCorp_2F_EventScript_ReceiveAnorithXPC
+	goto Common_EventScript_NoMoreRoomForPokemon
+	end
+
+RustboroCity_DevonCorp_2F_Text_DeviceToVisualizePokemonDreams:
+	.string "I'm trying to develop a device that\n"
+	.string "visually reproduces the dreams of\l"
+	.string "POKéMON…\p"
+	.string "But it's not going well.\p"
+	.string "Hey! Want An ANORITH?$"
+
+RustboroCity_DevonCorp_2F_EventScript_ReceiveAnorithXParty::
+	call RustboroCity_DevonCorp_2F_EventScript_ReceiveAnorithXFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, RustboroCity_DevonCorp_2F_EventScript_FinishReceivingAnorithX
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto RustboroCity_DevonCorp_2F_EventScript_FinishReceivingAnorithX
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_ReceiveAnorithXPC::
+	call RustboroCity_DevonCorp_2F_EventScript_ReceiveAnorithXFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, RustboroCity_DevonCorp_2F_EventScript_TransferAnorithXToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto RustboroCity_DevonCorp_2F_EventScript_TransferAnorithXToPC
+	end
+
+
+RustboroCity_DevonCorp_2F_EventScript_ReceiveAnorithXFanfare::
+	bufferspeciesname STR_VAR_2, SPECIES_ANORITH1
+	playfanfare MUS_OBTAIN_ITEM
+	message RustboroCity_DevonCorp_2F_EventScript_Text_ReceivedAnorithX
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_ANORITH1
+	return
+
+RustboroCity_DevonCorp_2F_EventScript_Text_ReceivedAnorithX:
+	.string "{PLAYER} received {STR_VAR_2}!$"
+
+
+RustboroCity_DevonCorp_2F_EventScript_FinishReceivingAnorithX::
+	release
+	end
+
+
+RustboroCity_DevonCorp_2F_EventScript_TransferAnorithXToPC::
+	call Common_EventScript_TransferredToPC
+	goto RustboroCity_DevonCorp_2F_EventScript_FinishReceivingAnorithX
+	end
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 RustboroCity_DevonCorp_2F_Text_DevelopingNewBalls:
 	.string "I'm developing new kinds of\n"
@@ -306,12 +424,6 @@ RustboroCity_DevonCorp_2F_Text_WowThatsAPokenav:
 	.string "features in detail?\p"
 	.string "No, no. I think you'll find out just by\n"
 	.string "trying the POKéNAV out.$"
-
-RustboroCity_DevonCorp_2F_Text_DeviceToVisualizePokemonDreams:
-	.string "I'm trying to develop a device that\n"
-	.string "visually reproduces the dreams of\l"
-	.string "POKéMON…\p"
-	.string "But it's not going well.$"
 
 RustboroCity_DevonCorp_2F_Text_DevelopDeviceToResurrectFossils:
 	.string "I've been trying to develop a device\n"
