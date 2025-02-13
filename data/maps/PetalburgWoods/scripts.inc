@@ -247,8 +247,8 @@ PetalburgWoods_Movement_AquaApproachPlayer:
 
 PetalburgWoods_EventScript_Boy1::
 	msgbox PetalburgWoods_Text_StayOutOfTallGrass, MSGBOX_NPC
-	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_SLAKING1
-	givemon SPECIES_SLAKING1, 5, ITEM_SILK_SCARF
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_SLAKOTH1
+	givemon SPECIES_SLAKOTH1, 5, ITEM_SILK_SCARF
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PetalburgWoods_EventScript_ReceiveSlakothParty
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PetalburgWoods_EventScript_ReceiveSlakothPC
 	goto Common_EventScript_NoMoreRoomForPokemon
